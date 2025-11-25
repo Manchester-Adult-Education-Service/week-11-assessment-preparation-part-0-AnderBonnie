@@ -260,6 +260,13 @@ while choice != "1" and choice != "2" and choice !="3":
 #
 # Write your code (add to your while loop):
     if choice == "1":
+        task = {
+            "name": task_name,
+            "priority": priority,
+            "status": "Not started"
+        }
+        tasks.append(task)
+
         task_name = input("Enter task name: ")
         while task_name == "":
             print("ERROR: Task name cannot be blank")
