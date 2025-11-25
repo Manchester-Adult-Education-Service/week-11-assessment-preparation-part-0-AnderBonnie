@@ -161,12 +161,13 @@ choice = "0"
 #        # Put ALL your menu code from Task 3 inside here
 #        # Remember to indent everything inside the loop!
 
-while choice != "3":
-    print("1. Add task")
-    print("2. View all tasks")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
+#while choice != "3":
+    #print("1. Add task")
+    #print("2. View all tasks")
+    #print("3. Exit")
+    #print()
+    #choice = input("Select an option: ")
+    #print()
 
 
 # 4. Delete the line that prints what they selected (we don't need it anymore)
@@ -213,6 +214,17 @@ while choice != "3":
 # 3. Test it by entering invalid options like "5" or "hello"
 #
 # Write your code (add to your while loop from Task 4):
+
+while choice != "1" and choice != "2" and choice !="3":
+    print("ERROR: Invalid choice")
+    print()
+    print("1. Add task")
+    print("2. View all tasks")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    print()
+
 
 
 
