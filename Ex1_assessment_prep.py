@@ -259,6 +259,13 @@ while choice != "1" and choice != "2" and choice !="3":
 # 2. Test option 1 - it should ask for input and confirm
 #
 # Write your code (add to your while loop):
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        priority = input("Enter priority (High/Medium/Low): ")
+        print()
+        print("Task added successfully")
+        print()
+
 
 
 
