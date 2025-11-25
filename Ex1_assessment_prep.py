@@ -44,8 +44,8 @@
 #
 # Write your code below:
 
-tasks = []
-print (tasks)
+foundeditemrecord = []
+print (foundeditems)
 
 
 
@@ -218,8 +218,8 @@ choice = "0"
 while choice != "1" and choice != "2" and choice !="3":
     print("ERROR: Invalid choice")
     print()
-    print("1. Add task")
-    print("2. View all tasks")
+    print("1. Add item")
+    print("2. View all records")
     print("3. Exit")
     print()
     choice = input("Select an option: ")
@@ -260,21 +260,28 @@ while choice != "1" and choice != "2" and choice !="3":
 #
 # Write your code (add to your while loop):
     if choice == "1":
-        task = {
-            "name": task_name,
-            "priority": priority,
-            "status": "Not started"
-        }
-        tasks.append(task)
+        item_name = input("Enter the founded item name: ")
+        while item_name == "":
+            print("ERROR: Item name cannot be blank")
+            item_name = input("Enter the founded item name: ")
 
-        task_name = input("Enter task name: ")
-        while task_name == "":
-            print("ERROR: Task name cannot be blank")
-            task_name = input("Enter task name: ")
-        priority = input("Enter priority (High/Medium/Low): ")
-        while priority == "":
-            print("ERROR: Priority cannot be blank")
-            priority = input("Enter priority (High/Medium/Low): ")
+        item_colour = input("Enter the founded item's color: ")
+        while item_colour == "":
+            print("ERROR: Item colour cannot be blank")
+            item_colour = input("Enter the founded item's color: ")
+
+        founded_location = input("Enter the founded location: ")
+        while founded_location == "":
+            print("ERROR: Founded location cannot be blank")
+            founded_location = input("Enter the founded location: ")
+
+        foundeditems = {
+            "name": item_name,
+            "priority": item_colour,
+            "location": founded_location
+        }
+        foundeditemrecord.append(foundeditems)
+
         print()
         print("Task added successfully")
         print()
@@ -396,6 +403,19 @@ while choice != "1" and choice != "2" and choice !="3":
 # 2. Test by adding some tasks, then viewing them
 #
 # Write your code (add after your choice == "1" section):
+    elif choice == "2":
+        if len(tasks) == 0:
+            print("No tasks recorded yet")
+            print()
+        else:
+            print("All tasks: ")
+            print()
+            for task in tasks:
+                print(f"Name : {task['name']}")
+                print(f"Priority: {task['priority']}")
+                print(f"Status: {task['status']}")
+                print("-----------------------------------------")
+            print()
 
 
 
