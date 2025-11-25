@@ -106,22 +106,27 @@ print()
 #    "1. Add task"
 #    "2. View all tasks"
 #    "3. Exit"
+#print("1. Add task")
+#print("2. View all tasks")
+#print("3. Exit")
 #
 # 2. Print a blank line
+#print()
 #
 # 3. Ask the user to choose an option and store it in a variable called 'choice'
 #    Use: choice = input("Select an option: ")
 #
 # 4. Print a blank line
+print()
 #
 # 5. Print what they chose: print(f"You selected: {choice}")
+#print(f"You selected: {choice}")
 #
 # Write your code below:
 
-print("1. Add task")
-print("2. View all tasks")
-print("3. Exit")
-user_option = input("Select an option: ")
+
+
+
 
 
 
@@ -148,12 +153,22 @@ user_option = input("Select an option: ")
 #
 # 2. BEFORE the menu code, set choice to "0" so the loop can start:
 #    choice = "0"
-#
+
+choice = "0"
+
 # 3. Replace the menu code with a while loop:
 #    while choice != "3":
 #        # Put ALL your menu code from Task 3 inside here
 #        # Remember to indent everything inside the loop!
-#
+
+while choice != "3":
+    print("1. Add task")
+    print("2. View all tasks")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+
+
 # 4. Delete the line that prints what they selected (we don't need it anymore)
 #
 # 5. Test it - the menu should repeat until you type "3"
