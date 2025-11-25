@@ -44,6 +44,9 @@
 #
 # Write your code below:
 
+tasks = []
+print (tasks)
+
 
 
 
@@ -73,6 +76,11 @@
 #
 # Write your code below:
 
+print("=======================================")
+print("TASK MANAGER SYSTEM")
+print("Keep track of your daily tasks")
+print("=======================================")
+print()
 
 
 
@@ -109,6 +117,11 @@
 # 5. Print what they chose: print(f"You selected: {choice}")
 #
 # Write your code below:
+
+print("1. Add task")
+print("2. View all tasks")
+print("3. Exit")
+user_option = input("Select an option: ")
 
 
 
