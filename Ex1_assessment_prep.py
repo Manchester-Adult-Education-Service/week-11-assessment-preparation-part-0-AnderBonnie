@@ -261,7 +261,13 @@ while choice != "1" and choice != "2" and choice !="3":
 # Write your code (add to your while loop):
     if choice == "1":
         task_name = input("Enter task name: ")
+        while task_name == "":
+            print("ERROR: Task name cannot be blank")
+            task_name = input("Enter task name: ")
         priority = input("Enter priority (High/Medium/Low): ")
+        while priority == "":
+            print("ERROR: Priority cannot be blank")
+            priority = input("Enter priority (High/Medium/Low): ")
         print()
         print("Task added successfully")
         print()
@@ -303,6 +309,9 @@ while choice != "1" and choice != "2" and choice !="3":
 # 4. Test by pressing Enter without typing anything
 #
 # Write your code (add to your choice == "1" section):
+        #while task_name == "":
+            #print("ERROR: Task name cannot be blank")
+            #task_name = input("Enter task name: ")
 
 
 
