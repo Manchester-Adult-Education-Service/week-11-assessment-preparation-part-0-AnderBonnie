@@ -44,8 +44,8 @@
 #
 # Write your code below:
 
-foundeditemrecord = []
-print (foundeditems)
+foundeditemrecord = [] #list
+print (foundeditemrecord)
 
 
 
@@ -117,7 +117,7 @@ print()
 #    Use: choice = input("Select an option: ")
 #
 # 4. Print a blank line
-print()
+#
 #
 # 5. Print what they chose: print(f"You selected: {choice}")
 #print(f"You selected: {choice}")
@@ -161,13 +161,13 @@ choice = "0"
 #        # Put ALL your menu code from Task 3 inside here
 #        # Remember to indent everything inside the loop!
 
-#while choice != "3":
-    #print("1. Add task")
-    #print("2. View all tasks")
-    #print("3. Exit")
-    #print()
-    #choice = input("Select an option: ")
-    #print()
+while choice != "3":
+    print("1. Add item")
+    print("2. View all record")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    print()
 
 
 # 4. Delete the line that prints what they selected (we don't need it anymore)
@@ -215,15 +215,15 @@ choice = "0"
 #
 # Write your code (add to your while loop from Task 4):
 
-while choice != "1" and choice != "2" and choice !="3":
-    print("ERROR: Invalid choice")
-    print()
-    print("1. Add item")
-    print("2. View all records")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    print()
+    while choice != "1" and choice != "2" and choice !="3":
+        print("ERROR: Invalid choice")
+        print()
+        print("1. Add item")
+        print("2. View all records")
+        print("3. Exit")
+        print()
+        choice = input("Select an option: ")
+        print()
 
 
 
@@ -277,13 +277,13 @@ while choice != "1" and choice != "2" and choice !="3":
 
         foundeditems = {
             "name": item_name,
-            "priority": item_colour,
+            "colour": item_colour,
             "location": founded_location
         }
         foundeditemrecord.append(foundeditems)
 
         print()
-        print("Task added successfully")
+        print("Item added successfully")
         print()
 
 
@@ -404,16 +404,17 @@ while choice != "1" and choice != "2" and choice !="3":
 #
 # Write your code (add after your choice == "1" section):
     elif choice == "2":
-        if len(tasks) == 0:
-            print("No tasks recorded yet")
+        if len(foundeditemrecord) == 0:
+            print("No founeded item recorded yet")
             print()
         else:
-            print("All tasks: ")
+            print("All items: ")
             print()
-            for task in tasks:
-                print(f"Name : {task['name']}")
-                print(f"Priority: {task['priority']}")
-                print(f"Status: {task['status']}")
+
+            for foundeditems in foundeditemrecord:
+                print(f"Name : {foundeditems['name']}")
+                print(f"Colour: {foundeditems['colour']}")
+                print(f"Location: {foundeditems['location']}")
                 print("-----------------------------------------")
             print()
 
