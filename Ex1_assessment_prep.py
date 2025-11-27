@@ -314,6 +314,7 @@ while choice != "3":
 #    while task_name == "":
 #        print("ERROR: Task name cannot be blank")
 #        task_name = input("Enter task name: ")
+
 #
 # 3. AFTER getting priority, add validation:
 #    while priority == "":
@@ -453,7 +454,9 @@ while choice != "3":
 #    - Try blank task names
 #
 # Write your code (add after your choice == "2" section):
-
+    elif choice == "3":
+        print("Thank you for you using our system")
+        print("Goodbye")
 
 
 
