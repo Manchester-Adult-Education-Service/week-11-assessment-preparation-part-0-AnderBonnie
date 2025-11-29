@@ -44,6 +44,9 @@
 #
 # Write your code below:
 
+foundeditemrecord = [] #list
+print (foundeditemrecord)
+
 
 
 
@@ -73,6 +76,11 @@
 #
 # Write your code below:
 
+print("=======================================")
+print("TASK MANAGER SYSTEM")
+print("Keep track of your daily tasks")
+print("=======================================")
+print()
 
 
 
@@ -98,17 +106,27 @@
 #    "1. Add task"
 #    "2. View all tasks"
 #    "3. Exit"
+#print("1. Add task")
+#print("2. View all tasks")
+#print("3. Exit")
 #
 # 2. Print a blank line
+#print()
 #
 # 3. Ask the user to choose an option and store it in a variable called 'choice'
 #    Use: choice = input("Select an option: ")
 #
 # 4. Print a blank line
 #
+#
 # 5. Print what they chose: print(f"You selected: {choice}")
+#print(f"You selected: {choice}")
 #
 # Write your code below:
+
+
+
+
 
 
 
@@ -135,12 +153,23 @@
 #
 # 2. BEFORE the menu code, set choice to "0" so the loop can start:
 #    choice = "0"
-#
+
+choice = "0"
+
 # 3. Replace the menu code with a while loop:
 #    while choice != "3":
 #        # Put ALL your menu code from Task 3 inside here
 #        # Remember to indent everything inside the loop!
-#
+
+while choice != "3":
+    print("1. Add item")
+    print("2. View all record")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    print()
+
+
 # 4. Delete the line that prints what they selected (we don't need it anymore)
 #
 # 5. Test it - the menu should repeat until you type "3"
@@ -186,6 +215,17 @@
 #
 # Write your code (add to your while loop from Task 4):
 
+    while choice != "1" and choice != "2" and choice !="3":
+        print("ERROR: Invalid choice")
+        print()
+        print("1. Add item")
+        print("2. View all records")
+        print("3. Exit")
+        print()
+        choice = input("Select an option: ")
+        print()
+
+
 
 
 
@@ -219,6 +259,33 @@
 # 2. Test option 1 - it should ask for input and confirm
 #
 # Write your code (add to your while loop):
+    if choice == "1":
+        item_name = input("Enter the founded item name: ")
+        while item_name == "":
+            print("ERROR: Item name cannot be blank")
+            item_name = input("Enter the founded item name: ")
+
+        item_colour = input("Enter the founded item's color: ")
+        while item_colour == "":
+            print("ERROR: Item colour cannot be blank")
+            item_colour = input("Enter the founded item's color: ")
+
+        founded_location = input("Enter the founded location: ")
+        while founded_location == "":
+            print("ERROR: Founded location cannot be blank")
+            founded_location = input("Enter the founded location: ")
+
+        foundeditems = {
+            "name": item_name,
+            "colour": item_colour,
+            "location": founded_location
+        }
+        foundeditemrecord.append(foundeditems)
+
+        print()
+        print("Item added successfully")
+        print()
+
 
 
 
@@ -247,6 +314,7 @@
 #    while task_name == "":
 #        print("ERROR: Task name cannot be blank")
 #        task_name = input("Enter task name: ")
+
 #
 # 3. AFTER getting priority, add validation:
 #    while priority == "":
@@ -256,6 +324,9 @@
 # 4. Test by pressing Enter without typing anything
 #
 # Write your code (add to your choice == "1" section):
+        #while task_name == "":
+            #print("ERROR: Task name cannot be blank")
+            #task_name = input("Enter task name: ")
 
 
 
@@ -333,6 +404,20 @@
 # 2. Test by adding some tasks, then viewing them
 #
 # Write your code (add after your choice == "1" section):
+    elif choice == "2":
+        if len(foundeditemrecord) == 0:
+            print("No founeded item recorded yet")
+            print()
+        else:
+            print("All items: ")
+            print()
+
+            for foundeditems in foundeditemrecord:
+                print(f"Name : {foundeditems['name']}")
+                print(f"Colour: {foundeditems['colour']}")
+                print(f"Location: {foundeditems['location']}")
+                print("-----------------------------------------")
+            print()
 
 
 
@@ -369,7 +454,9 @@
 #    - Try blank task names
 #
 # Write your code (add after your choice == "2" section):
-
+    elif choice == "3":
+        print("Thank you for you using our system")
+        print("Goodbye")
 
 
 
